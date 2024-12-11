@@ -1,11 +1,11 @@
 # Human Activity Recognition (HAR) Using Deep Learning Models
 
-This project implements Human Activity Recognition (HAR) using the UCI dataset and explores the performance of various deep learning models, including:
+This project focuses on evaluating various neural network architectures for the Human Activity Recognition (HAR) dataset using smartphones. The primary goal is to determine which model performs best at recognizing static activities such as **Sitting**, **Standing**, and **Laying**.
 
-- **Convolutional Neural Network (CNN)**
-- **Long Short-Term Memory Network (LSTM)**
-- **CNN-LSTM Hybrid**
-- **Temporal Convolutional Network (TCN)**
+1. **Convolutional Neural Network (CNN)**
+2. **Long Short-Term Memory Network (LSTM)**
+3. **Hybrid CNN-LSTM**
+4. **Temporal Convolutional Network (TCN)**
 
 The goal is to classify activities such as walking, sitting, standing, and more, based on sensor data collected from smartphones.
 
@@ -15,7 +15,7 @@ The goal is to classify activities such as walking, sitting, standing, and more,
 
 - [Dataset Overview](#dataset-overview)
 - [Project Details](#project-details)
-- [Models Implemented](#models-implemented)
+- [Architectures](#architectures)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Results](#results)
@@ -39,23 +39,42 @@ The dataset used in this project is the **UCI Human Activity Recognition Using S
 
 ## Project Details
 
-This project evaluates different deep learning architectures for HAR to identify the best-performing model in terms of accuracy, training time, and robustness.
+1. Implement and train four different neural network architectures.
+2. Compare the performance of each model, specifically on static activities (**Sitting**, **Standing**, and **Laying**).
+3. Visualize and analyze the results to determine the most effective approach.
+
 
 ---
 
-## Models Implemented
+## Architectures
 
-1. **Convolutional Neural Network (CNN)**
-   - Extracts spatial features from sensor data.
+### 1. Convolutional Neural Network (CNN)
+A CNN is used to extract spatial features from the sensor data. The architecture includes multiple convolutional and pooling layers.
 
-2. **Long Short-Term Memory Network (LSTM)**
-   - Captures temporal dependencies in the time-series data.
+**Architecture Diagram:**
 
-3. **CNN-LSTM Hybrid**
-   - Combines CNN for feature extraction and LSTM for sequence modeling.
+![CNN Architecture](images/cnn_architecture.png)
 
-4. **Temporal Convolutional Network (TCN)**
-   - Explores temporal patterns using a fully convolutional structure.
+### 2. Long Short-Term Memory (LSTM)
+LSTMs are used to model temporal dependencies in the data. The architecture includes LSTM layers followed by dense layers.
+
+**Architecture Diagram:**
+
+![LSTM Architecture](images/lstm_architecture.png)
+
+### 3. Hybrid CNN-LSTM
+The hybrid model combines CNN layers for feature extraction and LSTM layers for temporal modeling.
+
+**Architecture Diagram:**
+
+![CNN-LSTM Architecture](images/cnn_lstm_architecture.png)
+
+### 4. Temporal Convolutional Network (TCN)
+TCNs leverage causal convolutions to capture temporal patterns in the data efficiently.
+
+**Architecture Diagram:**
+
+![TCN Architecture](images/tcn_architecture.png)
 
 ---
 
